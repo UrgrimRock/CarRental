@@ -24,11 +24,11 @@ public class BaseController {
     @Autowired
     BaseService baseService;
 
-    @GetMapping("/bases")
-    public String Bases(Model model) {
+    @GetMapping("/students")
+    public String getAllBases(Model model) {
         List<BaseDto> bases = baseService.getAllBases();
         model.addAttribute("baseList", bases);
-        return "bases";
+        return "students";
     }
 
 //    @GetMapping("/addStudent")
