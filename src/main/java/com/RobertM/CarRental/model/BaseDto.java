@@ -1,15 +1,17 @@
 package com.RobertM.CarRental.model;
 
-import javax.persistence.*;
-
-import java.util.Set;
-
-@Entity
-public class Base {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class BaseDto {
+
+
+    public BaseDto() {
+    }
+
     private Long id;
 
     private String adres;
