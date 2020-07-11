@@ -31,51 +31,51 @@ public class BaseController {
         return "bases";
     }
 
-    @GetMapping("/addStudent")
-    public String addBaseForm() {
-        return "addStudent";
-    }
-
-    @PostMapping("/addStudent")
-    public String addBase(BaseDto baseDto) {
-        baseService.saveBase(baseDto);
-        return "redirect:/students";
-    }
-
-    @GetMapping("/editBase")
-    public String editBase(Model model,
-                           @RequestParam("id") Long id) {
-        BaseDto baseDto = baseService.getBaseById(id);
-        model.addAttribute("base", baseDto);
-        return "editBase";
-    }
-
-    @PostMapping("/editStudent")
-    public String saveEditedBase(BaseDto baseDto) {
-        baseService.saveBase(baseDto);
-        return "redirect:/bases";
-    }
-
-    @GetMapping("/deleteBase")
-    public String deleteBase(@RequestParam("id") Long id) {
-        baseService.deleteBaseById(id);
-        return "redirect:/bases";
-    }
-
-    @PostMapping("/findStudentByName")
-    public String findBaseByName(Model model, @RequestParam("nameToFind") String nameToFind) {
-        List<Base> foundList = baseRepository.findByName(nameToFind);
-        model.addAttribute("baseList", foundList);
-        return "bases";
-    }
-
-    @PostMapping("/findBaseByAdres")
-    public String findBaseByAdres(Model model,
-                                        @RequestParam("baseAdresToFind") String baseAdresToFind) {
-        List<Base> foundList = baseRepository.findByAdres(baseAdresToFind);
-        model.addAttribute("baseList", foundList);
-        return "bases";
-    }
+//    @GetMapping("/addStudent")
+//    public String addBaseForm() {
+//        return "addStudent";
+//    }
+//
+//    @PostMapping("/addStudent")
+//    public String addBase(BaseDto baseDto) {
+//        baseService.saveBase(baseDto);
+//        return "redirect:/students";
+//    }
+//
+//    @GetMapping("/editBase")
+//    public String editBase(Model model,
+//                           @RequestParam("id") Long id) {
+//        BaseDto baseDto = baseService.getBaseById(id);
+//        model.addAttribute("base", baseDto);
+//        return "editBase";
+//    }
+//
+//    @PostMapping("/editStudent")
+//    public String saveEditedBase(BaseDto baseDto) {
+//        baseService.saveBase(baseDto);
+//        return "redirect:/bases";
+//    }
+//
+//    @GetMapping("/deleteBase")
+//    public String deleteBase(@RequestParam("id") Long id) {
+//        baseService.deleteBaseById(id);
+//        return "redirect:/bases";
+//    }
+//
+//    @PostMapping("/findStudentByName")
+//    public String findBaseByName(Model model, @RequestParam("nameToFind") String nameToFind) {
+////        List<Base> foundList = baseRepository.findByName(nameToFind);
+////        model.addAttribute("baseList", foundList);
+//        return "bases";
+//    }
+//
+//    @PostMapping("/findBaseByAdres")
+//    public String findBaseByAdres(Model model,
+//                                        @RequestParam("baseAdresToFind") String baseAdresToFind) {
+////        List<Base> foundList = baseRepository.findByAdres(baseAdresToFind);
+////        model.addAttribute("baseList", foundList);
+//        return "bases";
+//    }
 
 
 }

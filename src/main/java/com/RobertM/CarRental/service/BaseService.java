@@ -26,7 +26,6 @@ public class BaseService {
         ArrayList<BaseDto> result = new ArrayList<>();
         for (Base base : baseList){
             result.add(BaseMapper.INSTANCE.baseToDto(base));
-
         }
         return result;
     }
