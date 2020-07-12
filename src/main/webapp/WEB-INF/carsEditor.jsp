@@ -18,21 +18,24 @@
 
 <body>
 
-    <h1>Wybierz adres</h1>
+    <h1>Lista Baz</h1>
 
+    <a href="/addCar">Dopisz Nową Bazę</a>
     <table>
         <tr>
-            <th>Nazwa</th>
-            <th>Adres</th>
+            <th>Marka</th>
+            <th>Model</th>
             <th></th>
             <th></th>
         </tr>
 
-        <c:forEach var="base" items="${basesList}">
+        <c:forEach var="car" items="${carsList}">
             <tr>
-                <td>${base.name}</td>
-                <td>${base.adres}</td>
-                <td><a href="cars">Wybierz</a></td>
+                <td>${car.brand}</td>
+                <td>${car.model}</td>
+                <td><a href="/deleteCar?id=${car.id}">Usuń</a></td>
+                <td><a href="/editCar?id=${car.id}">Edytuj</a></td>
+
             </tr>
         </c:forEach>
     </table>

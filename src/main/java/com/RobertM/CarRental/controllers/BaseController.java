@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -28,6 +29,12 @@ public class BaseController {
         model.addAttribute("basesList", bases);
         return "bases";
     }
+    @GetMapping("/basesEditor")
+    public String getAllBasesAdmin(Model model) {
+        List<BaseDto> bases = baseService.getAllBases();
+        model.addAttribute("basesList", bases);
+        return "basesEditor";
+    }
 
     @GetMapping("/addBase")
     public String addBaseForm() {
@@ -37,28 +44,28 @@ public class BaseController {
     @PostMapping("/addBase")
     public String addBase(BaseDto baseDto) {
         baseService.saveBase(baseDto);
-        return "redirect:/bases";
+        return "redirect:/basesEditor";
     }
 
-//    @GetMapping("/editBase")
-//    public String editBase(Model model,
-//                           @RequestParam("id") Long id) {
-//        BaseDto baseDto = baseService.getBaseById(id);
-//        model.addAttribute("base", baseDto);
-//        return "editBase";
-//    }
-//
-//    @PostMapping("/editStudent")
-//    public String saveEditedBase(BaseDto baseDto) {
-//        baseService.saveBase(baseDto);
-//        return "redirect:/bases";
-//    }
-//
-//    @GetMapping("/deleteBase")
-//    public String deleteBase(@RequestParam("id") Long id) {
-//        baseService.deleteBaseById(id);
-//        return "redirect:/bases";
-//    }
+    @GetMapping("/editBase")
+    public String editBase(Model model,
+                           @RequestParam("id") Long id) {
+        BaseDto baseDto = baseService.getBaseById(id);
+        model.addAttribute("base", baseDto);
+        return "editBase";
+    }
+
+    @PostMapping("/editBase")
+    public String saveEditedBase(BaseDto baseDto) {
+        baseService.saveBase(baseDto);
+        return "redirect:/basesEditor";
+    }
+
+    @GetMapping("/deleteBase")
+    public String deleteBase(@RequestParam("id") Long id) {
+        baseService.deleteBaseById(id);
+        return "redirect:/basesEditor";
+    }
 //
 //    @PostMapping("/findStudentByName")
 //    public String findBaseByName(Model model, @RequestParam("nameToFind") String nameToFind) {

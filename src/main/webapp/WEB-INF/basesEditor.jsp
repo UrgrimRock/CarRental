@@ -23,6 +23,7 @@
     <a href="/addBase">Dopisz Nową Bazę</a>
     <table>
         <tr>
+            <th>Nazwa</th>
             <th>Adres</th>
             <th></th>
             <th></th>
@@ -30,12 +31,10 @@
 
         <c:forEach var="base" items="${basesList}">
             <tr>
+                <td>${base.name}</td>
                 <td>${base.adres}</td>
                 <td><a href="/deleteBase?id=${base.id}">Usuń</a></td>
                 <td><a href="/editBase?id=${base.id}">Edytuj</a></td>
-                <td>
-                    Dupa
-                </td>
             </tr>
         </c:forEach>
     </table>

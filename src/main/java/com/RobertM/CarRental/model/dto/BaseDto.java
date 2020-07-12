@@ -9,7 +9,16 @@ public class BaseDto {
     }
 
     private Long id;
+    private String name;
     private String adres;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getAdres() {
         return adres;

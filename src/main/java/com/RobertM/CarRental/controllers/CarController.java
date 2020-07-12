@@ -27,6 +27,12 @@ public class CarController {
         model.addAttribute("carsList", cars);
         return "cars";
     }
+    @GetMapping("/carsEditor")
+    public String getAllCarsAdmin(Model model) {
+        List<CarDto> cars = carService.getAllCars();
+        model.addAttribute("carsList", cars);
+        return "carsEditor";
+    }
 
     @GetMapping("/addCar")
     public String addCarForm() {
@@ -36,6 +42,6 @@ public class CarController {
     @PostMapping("/addCar")
     public String addCar(CarDto carDto) {
         carService.saveCar(carDto);
-        return "redirect:/cars";
+        return "redirect:/carsEditor";
     }
 }

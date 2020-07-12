@@ -1,25 +1,44 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Geral
-  Date: 2020-07-11
-  Time: 14:29
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>WORK IN PROGRESS!!!</title>
-</head>
-<body>
-<h1>
-    WORK IN PROGRESS!!!
 
-</h1>
-<button>
-    <a href="">
-        Powrót
-    </a>
-</button>
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        table, td, th {
+            border: 3px solid blueviolet;
+            border-collapse: collapse;
+            background-color: green;
+        }
+        body{
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Lista Baz</h1>
+
+<table>
+    <tr>
+        <th>Marka</th>
+        <th>Model</th>
+        <th></th>
+    </tr>
+
+    <c:forEach var="car" items="${carsList}">
+        <tr>
+            <td>${car.brand}</td>
+            <td>${car.model}</td>
+            <td><a href="\">Wybierz</a></td>
+
+
+        </tr>
+    </c:forEach>
+</table>
+
+<br>
 
 </body>
 </html>

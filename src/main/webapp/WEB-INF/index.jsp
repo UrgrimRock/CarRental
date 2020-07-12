@@ -7,15 +7,20 @@
 
     <h1>Witaj w aplikacji pozawalającej wynająć auto!</h1>
 
+    Urzytkownik
     <button >
         <a href="/bases">
-            ZACZYNAMY
+            WYNAJMIJ AUTO
+        </a>
+    </button>
+    <br><br><br>
+    Admin
+    <button >
+        <a href="/basesEditor">
+            EDYTUJ
         </a>
     </button>
 
-    <p>
-        Jest godzina ${dateTime}
-    </p>
 
 </body>
 </html>
