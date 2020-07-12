@@ -2,11 +2,10 @@ package com.RobertM.CarRental.model.entity;
 
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+
 
 @Entity
-public class Emploee {
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
