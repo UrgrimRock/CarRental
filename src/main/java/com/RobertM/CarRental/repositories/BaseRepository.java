@@ -1,10 +1,8 @@
 package com.RobertM.CarRental.repositories;
 
-import com.RobertM.CarRental.model.Base;
+import com.RobertM.CarRental.model.entity.Base;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 
-import java.util.List;
 
 public interface BaseRepository extends JpaRepository<Base, Long> {
 

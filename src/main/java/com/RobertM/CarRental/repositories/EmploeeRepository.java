@@ -1,9 +1,9 @@
 package com.RobertM.CarRental.repositories;
 
-import com.RobertM.CarRental.model.Base;
-import com.RobertM.CarRental.model.Emploee;
-import org.springframework.data.repository.CrudRepository;
 
-public interface EmploeeRepository extends CrudRepository<Emploee, Long> {
+import com.RobertM.CarRental.model.entity.Emploee;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EmploeeRepository extends JpaRepository<Emploee, Long> {
 
 }

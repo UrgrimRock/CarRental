@@ -1,8 +1,7 @@
 package com.RobertM.CarRental.controllers;
 
 
-import com.RobertM.CarRental.model.Base;
-import com.RobertM.CarRental.model.BaseDto;
+import com.RobertM.CarRental.model.dto.BaseDto;
 import com.RobertM.CarRental.repositories.BaseRepository;
 import com.RobertM.CarRental.service.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -24,24 +22,24 @@ public class BaseController {
     @Autowired
     BaseService baseService;
 
-    @GetMapping("/students")
+    @GetMapping("/bases")
     public String getAllBases(Model model) {
         List<BaseDto> bases = baseService.getAllBases();
-        model.addAttribute("baseList", bases);
-        return "students";
+        model.addAttribute("basesList", bases);
+        return "bases";
     }
 
-//    @GetMapping("/addStudent")
-//    public String addBaseForm() {
-//        return "addStudent";
-//    }
-//
-//    @PostMapping("/addStudent")
-//    public String addBase(BaseDto baseDto) {
-//        baseService.saveBase(baseDto);
-//        return "redirect:/students";
-//    }
-//
+    @GetMapping("/addBase")
+    public String addBaseForm() {
+        return "addBase";
+    }
+
+    @PostMapping("/addBase")
+    public String addBase(BaseDto baseDto) {
+        baseService.saveBase(baseDto);
+        return "redirect:/bases";
+    }
+
 //    @GetMapping("/editBase")
 //    public String editBase(Model model,
 //                           @RequestParam("id") Long id) {

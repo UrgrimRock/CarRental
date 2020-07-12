@@ -1,9 +1,5 @@
-package com.RobertM.CarRental.model;
+package com.RobertM.CarRental.model.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 
 public class BaseDto {
@@ -13,9 +9,7 @@ public class BaseDto {
     }
 
     private Long id;
-
     private String adres;
-
 
     public String getAdres() {
         return adres;

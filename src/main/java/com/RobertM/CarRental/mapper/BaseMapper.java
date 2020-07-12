@@ -1,7 +1,7 @@
 package com.RobertM.CarRental.mapper;
 
-import com.RobertM.CarRental.model.Base;
-import com.RobertM.CarRental.model.BaseDto;
+import com.RobertM.CarRental.model.entity.Base;
+import com.RobertM.CarRental.model.dto.BaseDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

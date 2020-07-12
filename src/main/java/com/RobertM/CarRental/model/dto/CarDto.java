@@ -1,14 +1,6 @@
-package com.RobertM.CarRental.model;
+package com.RobertM.CarRental.model.dto;
 
-import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
-
-@Entity
-public class Car {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class CarDto {
     private Long id;
     private String brand;
     private String model;
@@ -19,6 +11,8 @@ public class Car {
     private String status;
     private Integer pricePerDay;
 
+    public CarDto() {
+    }
 
     public Long getId() {
         return id;
@@ -91,6 +85,4 @@ public class Car {
     public void setPricePerDay(Integer pricePerDay) {
         this.pricePerDay = pricePerDay;
     }
-
-
 }

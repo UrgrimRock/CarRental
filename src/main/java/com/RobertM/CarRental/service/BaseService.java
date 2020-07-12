@@ -1,8 +1,8 @@
 package com.RobertM.CarRental.service;
 
 import com.RobertM.CarRental.mapper.BaseMapper;
-import com.RobertM.CarRental.model.Base;
-import com.RobertM.CarRental.model.BaseDto;
+import com.RobertM.CarRental.model.entity.Base;
+import com.RobertM.CarRental.model.dto.BaseDto;
 import com.RobertM.CarRental.repositories.BaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,9 +34,9 @@ public class BaseService {
     }
 
     public BaseDto getBaseById(Long id) {
-        Optional<Base> student = baseRepository.findById(id);
-        if(student.isPresent()) {
-            return BaseMapper.INSTANCE.baseToDto(student.get());
+        Optional<Base> base = baseRepository.findById(id);
+        if(base.isPresent()) {
+            return BaseMapper.INSTANCE.baseToDto(base.get());
         }
         return null;
     }

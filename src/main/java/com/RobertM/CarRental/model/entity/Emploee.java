@@ -1,4 +1,4 @@
-package com.RobertM.CarRental.model;
+package com.RobertM.CarRental.model.entity;
 
 
 import javax.persistence.*;

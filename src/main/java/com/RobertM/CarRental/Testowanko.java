@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
 public class Testowanko implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("nie umiem tego robić bo jestem bardzo dlpim człowieiem");
+        System.out.println("nie umiem tego robić bo jestem bardzo dlpim człowieiem ;(");
     }
 }

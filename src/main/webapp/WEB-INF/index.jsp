@@ -1,11 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>CarRental</title>
 </head>
 <body>
 
-    <h1>Witam</h1>
+    <h1>Witaj w aplikacji pozawalającej wynająć auto!</h1>
+
+    <button >
+        <a href="/bases">
+            ZACZYNAMY
+        </a>
+    </button>
 
     <p>
         Jest godzina ${dateTime}
