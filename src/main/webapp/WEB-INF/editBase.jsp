@@ -12,4 +12,9 @@
         <input type="submit" value="Zapisz">
     </form>
 </body>
+<button >
+    <a href="/">
+        OD NOWA
+    </a>
+</button>
 </html>

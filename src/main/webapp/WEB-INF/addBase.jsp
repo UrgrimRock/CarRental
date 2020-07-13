@@ -10,5 +10,10 @@
         Adres <input name="adres" /><br/>
         <input type="submit" value="Zapisz">
     </form>
+<button >
+    <a href="/">
+        OD NOWA
+    </a>
+</button>
 </body>
 </html>

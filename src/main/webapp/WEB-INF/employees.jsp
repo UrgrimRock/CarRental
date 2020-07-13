@@ -18,32 +18,32 @@
 
 <body>
 
-<h1>Lista Baz</h1>
+<h1>Lista Pracowników</h1>
 
 <table>
     <tr>
-        <th>Marka</th>
-        <th>Model</th>
+        <th>Imie</th>
+        <th>Nazwisko</th>
+        <th>Menager</th>
         <th></th>
     </tr>
 
-    <c:forEach var="car" items="${carsList}">
+    <c:forEach var="employee" items="${employeesList}">
         <tr>
-            <td>${car.brand}</td>
-            <td>${car.model}</td>
-            <td><a href="/">Wybierz</a></td>
-
+            <td>${employee.name}</td>
+            <td>${employee.surname}</td>
+            <td>${employee.isManager}</td>
 
         </tr>
     </c:forEach>
 </table>
-
-<br>
 <button >
     <a href="/">
         OD NOWA
     </a>
 </button>
+
+<br>
 
 </body>
 </html>

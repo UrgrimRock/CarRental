@@ -17,9 +17,16 @@
     Admin
     <button >
         <a href="/basesEditor">
-            EDYTUJ
+            EDYTUJ Bazy
         </a>
     </button>
+    <button >
+        <a href="/employeesEditor">
+            Edytuj Pracowników
+        </a>
+    </button>
+
+
 
 
 </body>

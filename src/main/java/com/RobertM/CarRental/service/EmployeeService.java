@@ -25,7 +25,7 @@ public class EmployeeService {
         this.employeeRepository = employeeRepository;
     }
 
-    public List<EmployeeDto> getAllEmployee(){
+    public List<EmployeeDto> getAllEmployees(){
         Iterable<Employee> employeeList= employeeRepository.findAll();
         ArrayList<EmployeeDto> result = new ArrayList<>();
         for (Employee employee : employeeList){

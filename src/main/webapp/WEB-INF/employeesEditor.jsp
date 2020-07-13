@@ -18,21 +18,27 @@
 
 <body>
 
-    <h1>Wybierz adres</h1>
+    <h1>Lista Pracowników</h1>
 
+    <a href="/addEmployee">Zatrudnij nowego pracownika!</a>
     <table>
         <tr>
-            <th>Nazwa</th>
-            <th>Adres</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Menadzer</th>
             <th></th>
             <th></th>
         </tr>
 
-        <c:forEach var="base" items="${basesList}">
+        <c:forEach var="employee" items="${employeesList}">
             <tr>
-                <td>${base.name}</td>
-                <td>${base.adres}</td>
-                <td><a href="cars">Wybierz</a></td>
+                <td>${employee.name}</td>
+                <td>${employee.surname}</td>
+<%--                <td>${employee.isManager}</td>--%>
+                <td><br/></td>
+                <td><a href="/deleteEmployee?id=${employee.id}">Usuń</a></td>
+                <td><a href="/editEmployee?id=${employee.id}">Edytuj</a></td>
+
             </tr>
         </c:forEach>
     </table>
