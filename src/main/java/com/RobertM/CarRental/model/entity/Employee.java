@@ -13,7 +13,7 @@ public class Employee {
 
     private String name;
     private String surname;
-    private Boolean isManager;
+    private String isManager;
 
 
     public Long getId() {
@@ -40,13 +40,11 @@ public class Employee {
         this.surname = surname;
     }
 
-    public Boolean getManager() {
+    public String getIsManager() {
         return isManager;
     }
 
-    public void setManager(Boolean manager) {
-        isManager = manager;
+    public void setIsManager(String isManager) {
+        this.isManager = isManager;
     }
-
-
-    }
+}

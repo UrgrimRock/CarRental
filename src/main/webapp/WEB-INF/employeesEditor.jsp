@@ -34,7 +34,7 @@
             <tr>
                 <td>${employee.name}</td>
                 <td>${employee.surname}</td>
-<%--                <td>${employee.isManager}</td>--%>
+                <td>${employee.isManager}</td>
                 <td><br/></td>
                 <td><a href="/deleteEmployee?id=${employee.id}">Usuń</a></td>
                 <td><a href="/editEmployee?id=${employee.id}">Edytuj</a></td>

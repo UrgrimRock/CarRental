@@ -5,7 +5,7 @@ public class EmployeeDto {
     private Long id;
     private String name;
     private String surname;
-    private Boolean isManager;
+    private String isManager;
 
     public EmployeeDto() {
     }
@@ -34,13 +34,11 @@ public class EmployeeDto {
         this.surname = surname;
     }
 
-    public Boolean getManager() {
+    public String getIsManager() {
         return isManager;
     }
 
-    public void setManager(Boolean manager) {
-        isManager = manager;
+    public void setIsManager(String isManager) {
+        this.isManager = isManager;
     }
-
-
-    }
+}

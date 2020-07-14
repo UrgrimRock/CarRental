@@ -8,10 +8,7 @@
     <form method="post" action="/editStudent">
         Imie: <input name="name" value="${employee.name}" /><br/>
         Nazwisko: <input name="surname" value="${employee.surname}"><br/>
-        Menadzer: <select name="isManager" value="${employee.isManager}">
-                        <option>Tak</option>
-                        <option>Nie</option>
-                  </select>
+        Menadzer: <input value="${employee.isManager}" name="isManager"><br/>
         <input type="hidden" name="id" value="${employee.id}">
         <input type="submit" value="Zapisz">
     </form>
