@@ -18,12 +18,14 @@
 
 <body>
 
-<h1>Lista Baz</h1>
+<h1>Lista Samochodów</h1>
 
 <table>
     <tr>
         <th>Marka</th>
         <th>Model</th>
+        <th>Baza</th>
+
         <th></th>
     </tr>
 
@@ -31,6 +33,7 @@
         <tr>
             <td>${car.brand}</td>
             <td>${car.model}</td>
+            <td>${car.base_id}</td>
             <td><a href="/">Wybierz</a></td>
 
 

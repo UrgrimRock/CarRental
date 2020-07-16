@@ -18,13 +18,14 @@
 
 <body>
 
-    <h1>Lista Baz</h1>
+    <h1>Lista Samochodów</h1>
 
-    <a href="/addCar">Dopisz Nową Bazę</a>
+    <a href="/addCar">Dopisz Nowy Samochód</a>
     <table>
         <tr>
             <th>Marka</th>
             <th>Model</th>
+            <th>Baza</th>
             <th></th>
             <th></th>
         </tr>
@@ -33,6 +34,8 @@
             <tr>
                 <td>${car.brand}</td>
                 <td>${car.model}</td>
+<%--                <td>${car.base_id}</td>--%>
+
                 <td><a href="/deleteCar?id=${car.id}">Usuń</a></td>
                 <td><a href="/editCar?id=${car.id}">Edytuj</a></td>
 

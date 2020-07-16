@@ -1,6 +1,7 @@
 package com.RobertM.CarRental.model.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
@@ -12,6 +13,8 @@ public class Base {
     private Long id;
     private String name;
     private String adres;
+    @OneToMany
+    private List<Car> cars;
 
 
     public String getName() {

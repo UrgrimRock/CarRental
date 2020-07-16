@@ -18,6 +18,8 @@ public class Car {
     private Integer course;
     private String status;
     private Integer pricePerDay;
+    @ManyToOne
+    private Base base;
 
 
     public Long getId() {
