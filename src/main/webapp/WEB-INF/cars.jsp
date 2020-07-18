@@ -33,7 +33,6 @@
         <tr>
             <td>${car.brand}</td>
             <td>${car.model}</td>
-            <td>${car.base_id}</td>
             <td><a href="/">Wybierz</a></td>
 
 
