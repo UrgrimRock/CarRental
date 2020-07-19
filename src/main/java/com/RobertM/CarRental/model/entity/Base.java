@@ -17,6 +17,15 @@ public class Base {
     private List<Car> cars;
 
 
+    public Base() {
+    }
+
+    public Base(String name, String adres) {
+
+        this.name = name;
+        this.adres = adres;
+    }
+
     public String getName() {
         return name;
     }
