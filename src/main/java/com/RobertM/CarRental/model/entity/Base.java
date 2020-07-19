@@ -41,5 +41,11 @@ public class Base {
         this.id = id;
     }
 
+    public List<Car> getCars() {
+        return cars;
+    }
 
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
 }

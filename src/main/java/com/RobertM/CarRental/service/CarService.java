@@ -3,6 +3,7 @@ package com.RobertM.CarRental.service;
 
 import com.RobertM.CarRental.mapper.CarMapper;
 import com.RobertM.CarRental.model.dto.CarDto;
+import com.RobertM.CarRental.model.entity.Base;
 import com.RobertM.CarRental.model.entity.Car;
 import com.RobertM.CarRental.repositories.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +47,9 @@ public class CarService {
 
     public void saveCar(CarDto carDto){
         Car car = CarMapper.INSTANCE.dtoToCar(carDto);
+        Base base = new Base();
+        base.setId(carDto.getBaseId().longValue());
+        car.setBase(base);
         carRepository.save(car);
     }
 }

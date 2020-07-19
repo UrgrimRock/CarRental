@@ -94,5 +94,11 @@ public class Car {
         this.pricePerDay = pricePerDay;
     }
 
+    public Base getBase() {
+        return base;
+    }
 
+    public void setBase(Base base) {
+        this.base = base;
+    }
 }
