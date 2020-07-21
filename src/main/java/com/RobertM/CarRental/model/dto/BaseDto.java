@@ -1,6 +1,9 @@
 package com.RobertM.CarRental.model.dto;
 
 
+import com.RobertM.CarRental.model.entity.Car;
+
+import java.util.List;
 
 public class BaseDto {
 
@@ -11,6 +14,8 @@ public class BaseDto {
     private Long id;
     private String name;
     private String adres;
+    private List<Car> cars;
+
 
     public String getName() {
         return name;
@@ -36,5 +41,11 @@ public class BaseDto {
         this.id = id;
     }
 
+    public List<Car> getCars() {
+        return cars;
+    }
 
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
 }

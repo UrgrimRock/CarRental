@@ -22,6 +22,7 @@ public class Car {
     private Base base;
 
 
+
     public Long getId() {
         return id;
     }
@@ -101,4 +102,8 @@ public class Car {
     public void setBase(Base base) {
         this.base = base;
     }
+
+
+
+
 }

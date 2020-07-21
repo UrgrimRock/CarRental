@@ -1,6 +1,7 @@
 package com.RobertM.CarRental.model.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -14,7 +15,8 @@ public class Base {
     private String name;
     private String adres;
     @OneToMany
-    private List<Car> cars;
+    @JoinColumn(name = "base_id")
+    private List<Car> cars = new ArrayList<>();
 
 
     public Base() {

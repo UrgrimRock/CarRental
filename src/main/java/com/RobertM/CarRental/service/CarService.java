@@ -32,11 +32,23 @@ public class CarService {
         }
         return result;
     }
-    public void deleteBaseById(Long id) {
+    public List<CarDto> getCarsInBase() {
+        Iterable<Car> carsList = carRepository.findAll();
+        ArrayList<CarDto> result = new ArrayList<>();
+        Base base= new Base();
+        for (Car car : carsList) {
+            if (car.getBase().getId()==2){
+                result.add(CarMapper.INSTANCE.carToDto(car));
+            }
+        }
+        return result;
+    }
+
+    public void deleteCarById(Long id) {
         carRepository.deleteById(id);
     }
 
-    public CarDto getBaseById(Long id) {
+    public CarDto getCarById(Long id) {
         Optional<Car> car = carRepository.findById(id);
         if(car.isPresent()) {
             return CarMapper.INSTANCE.carToDto(car.get());

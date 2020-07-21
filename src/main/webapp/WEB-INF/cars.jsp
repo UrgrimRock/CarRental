@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="style.css" type="text/css">
+
     <style>
         table, td, th {
             border: 3px solid blueviolet;
@@ -29,10 +29,13 @@
         <th></th>
     </tr>
 
+
+
     <c:forEach var="car" items="${carsList}">
-        <tr>
+        <tr >
             <td>${car.brand}</td>
             <td>${car.model}</td>
+            <td >${car.baseId}</td>
             <td><a href="/">Wybierz</a></td>
 
 

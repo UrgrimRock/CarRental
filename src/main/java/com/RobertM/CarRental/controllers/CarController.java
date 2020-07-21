@@ -11,7 +11,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.LinkedList;
 import java.util.List;
 
 @Controller
@@ -26,17 +28,26 @@ public class CarController {
     @Autowired
     BaseService baseService;
 
-    @GetMapping("/cars")
-    public String getAllCars(Model model) {
-        List<CarDto> cars = carService.getAllCars();
-        model.addAttribute("carsList", cars);
-        return "cars";
-    }
+//    @GetMapping("/cars")
+//    public String getAllCars(Model model) {
+//        List<CarDto> cars = carService.getAllCars();
+//
+//        model.addAttribute("carsList", cars);
+//        return "cars";
+//    }
+
     @GetMapping("/carsEditor")
     public String getAllCarsAdmin(Model model) {
         List<CarDto> cars = carService.getAllCars();
         model.addAttribute("carsList", cars);
         return "carsEditor";
+    }
+    @GetMapping("/cars")
+    public String getCarsInBase(Model model) {
+        List<CarDto> cars = carService.getCarsInBase();
+
+        model.addAttribute("carsList", cars);
+        return "cars";
     }
 
     @GetMapping("/addCar")
@@ -51,4 +62,10 @@ public class CarController {
         carService.saveCar(carDto);
         return "redirect:/carsEditor";
     }
+    @GetMapping("/deleteCar")
+    public String deleteCar(@RequestParam("id") Long id) {
+        carService.deleteCarById(id);
+        return "redirect:/carsEditor";
+    }
+
 }

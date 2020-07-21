@@ -1,0 +1,8 @@
+table, td, th {
+    border: 3px solid blueviolet;
+    border-collapse: collapse;
+    background-color: palegreen;
+}
+body{
+    background-color: green;
+}

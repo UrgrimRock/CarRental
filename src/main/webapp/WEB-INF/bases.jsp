@@ -3,17 +3,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <style>
-        table, td, th {
-            border: 3px solid blueviolet;
-            border-collapse: collapse;
-            background-color: green;
-        }
-        body{
-            background-color: aqua;
-        }
-    </style>
+    <style><%@include file="style.css" %></style>
 </head>
 
 <body>
@@ -24,7 +14,6 @@
         <tr>
             <th>Nazwa</th>
             <th>Adres</th>
-            <th></th>
             <th></th>
         </tr>
 

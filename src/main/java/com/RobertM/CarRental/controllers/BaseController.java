@@ -2,8 +2,10 @@ package com.RobertM.CarRental.controllers;
 
 
 import com.RobertM.CarRental.model.dto.BaseDto;
+import com.RobertM.CarRental.model.dto.CarDto;
 import com.RobertM.CarRental.repositories.BaseRepository;
 import com.RobertM.CarRental.service.BaseService;
+import com.RobertM.CarRental.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +24,8 @@ public class BaseController {
 
     @Autowired
     BaseService baseService;
+    @Autowired
+    CarService carService;
 
     @GetMapping("/bases")
     public String getAllBases(Model model) {
@@ -35,11 +39,14 @@ public class BaseController {
         model.addAttribute("basesList", bases);
         return "basesEditor";
     }
-
     @GetMapping("/addBase")
-    public String addBaseForm() {
-        return "addBase";
+    public String addCarForm(Model model) {
+        List<BaseDto> bases = baseService.getAllBases();
+        model.addAttribute("basesList", bases);
+        return "addCar";
     }
+
+
 
     @PostMapping("/addBase")
     public String addBase(BaseDto baseDto) {

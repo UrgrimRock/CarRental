@@ -14,6 +14,7 @@ public interface BaseMapper {
     BaseDto baseToDto(Base base);
     Base dtoToBase(BaseDto baseDto);
 
+
     List<BaseDto> baseListToDto(List<Base> base);
     List<Base> dtoToBase(List<BaseDto> baseDtos);
 }
