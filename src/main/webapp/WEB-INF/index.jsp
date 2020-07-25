@@ -25,11 +25,14 @@
             Edytuj Pracowników
         </a>
     </button>
+
     <button >
         <a href="/carsEditor">
             EDYTUJ Auta
         </a>
     </button>
+
+    <img src="pan%20kurczak.jpg"alt="PAN KURCZAK" height="840" width="757">
 
 
 

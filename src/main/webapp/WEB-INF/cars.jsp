@@ -25,7 +25,12 @@
         <th>Marka</th>
         <th>Model</th>
         <th>Baza</th>
-
+        <th>Typ Nadwozia</th>
+        <th>Rok Produkcji</th>
+        <th>Kolor</th>
+        <th>Przebieg</th>
+        <th>Status</th>
+        <th>Cena na dzień</th>
         <th></th>
     </tr>
 
@@ -35,7 +40,13 @@
         <tr >
             <td>${car.brand}</td>
             <td>${car.model}</td>
-            <td >${car.baseId}</td>
+            <td>${car.baseId}</td>
+            <td>${car.bodyType}</td>
+            <td>${car.productionYear}</td>
+            <td>${car.color}</td>
+            <td>${car.course}</td>
+            <td>${car.status}</td>
+            <td>${car.pricePerDay}</td>
             <td><a href="/">Wybierz</a></td>
 
 
@@ -49,6 +60,7 @@
         OD NOWA
     </a>
 </button>
+<img src="pan%20kurczak.jpg">
 
 </body>
 </html>

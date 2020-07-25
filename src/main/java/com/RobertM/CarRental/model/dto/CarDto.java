@@ -11,6 +11,7 @@ public class CarDto {
     private String status;
     private Integer pricePerDay;
     private Long baseId;
+    private BaseDto baseDto;
 
     public CarDto() {
     }
@@ -93,5 +94,13 @@ public class CarDto {
 
     public void setBaseId(Long baseId) {
         this.baseId = baseId;
+    }
+
+    public BaseDto getBaseDto() {
+        return baseDto;
+    }
+
+    public void setBaseDto(BaseDto baseDto) {
+        this.baseDto = baseDto;
     }
 }

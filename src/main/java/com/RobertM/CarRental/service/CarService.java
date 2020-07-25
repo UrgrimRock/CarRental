@@ -35,7 +35,6 @@ public class CarService {
     public List<CarDto> getCarsInBase() {
         Iterable<Car> carsList = carRepository.findAll();
         ArrayList<CarDto> result = new ArrayList<>();
-        Base base= new Base();
         for (Car car : carsList) {
             if (car.getBase().getId()==2){
                 result.add(CarMapper.INSTANCE.carToDto(car));

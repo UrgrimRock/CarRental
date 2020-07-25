@@ -1,30 +1,25 @@
 package com.RobertM.CarRental.model.entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
-
 
 @Entity
-public class Base {
-
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+    private String email;
     private String adres;
-    @OneToMany
-    private List<Car> cars = new ArrayList<>();
+    private String role;
 
 
-    public Base() {
+    public Long getId() {
+        return id;
     }
 
-    public Base(String name, String adres) {
-
-        this.name = name;
-        this.adres = adres;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -35,6 +30,14 @@ public class Base {
         this.name = name;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getAdres() {
         return adres;
     }
@@ -43,19 +46,13 @@ public class Base {
         this.adres = adres;
     }
 
-    public Long getId() {
-        return id;
+    public String getRole() {
+        return role;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setRole(String role) {
+        this.role = role;
     }
 
-    public List<Car> getCars() {
-        return cars;
-    }
 
-    public void setCars(List<Car> cars) {
-        this.cars = cars;
-    }
 }
