@@ -9,7 +9,7 @@
 <body>
 <h1>Dodaj Auto</h1>
     <form method="post" action="${pageContext.request.contextPath}/addCar">
-        Marka <input name="brand" /><br/>
+        Marka <input   name="brand" /><br/>
         Model <input name="model" /><br/>
         Baza <select name="baseId">
                     <option selected disabled >Wybierz adres</option>
@@ -18,7 +18,7 @@
                     </c:forEach>
                 </select>
         <br/>
-        Typ Nadwozia<select name="bodyType">
+        Typ Nadwozia<select  name="bodyType">
                         <option>Kompakt</option>
                         <option>Sedan</option>
                         <option>Kombi</option>

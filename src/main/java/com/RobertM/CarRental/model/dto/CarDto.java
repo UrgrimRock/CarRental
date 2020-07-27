@@ -10,8 +10,10 @@ public class CarDto {
     private Integer course;
     private String status;
     private Integer pricePerDay;
+    private String baseAdres;
+    private String baseName;
     private Long baseId;
-    private BaseDto baseDto;
+
 
     public CarDto() {
     }
@@ -88,19 +90,27 @@ public class CarDto {
         this.pricePerDay = pricePerDay;
     }
 
+    public String getBaseAdres() {
+        return baseAdres;
+    }
+
+    public void setBaseAdres(String baseAdres) {
+        this.baseAdres = baseAdres;
+    }
+
+    public String getBaseName() {
+        return baseName;
+    }
+
+    public void setBaseName(String baseName) {
+        this.baseName = baseName;
+    }
+
     public Long getBaseId() {
         return baseId;
     }
 
     public void setBaseId(Long baseId) {
         this.baseId = baseId;
-    }
-
-    public BaseDto getBaseDto() {
-        return baseDto;
-    }
-
-    public void setBaseDto(BaseDto baseDto) {
-        this.baseDto = baseDto;
     }
 }

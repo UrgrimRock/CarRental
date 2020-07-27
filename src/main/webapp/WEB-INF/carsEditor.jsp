@@ -25,6 +25,7 @@
             <th>Marka</th>
             <th>Model</th>
             <th>Baza</th>
+            <th>Adres</th>
             <th>Typ Nadwozia</th>
             <th>Rok Produkcji</th>
             <th>Kolor</th>
@@ -39,7 +40,8 @@
             <tr>
                 <td>${car.brand}</td>
                 <td>${car.model}</td>
-                <td>${car.baseId}</td>
+                <td>${car.baseName}</td>
+                <td>${car.baseAdres}</td>
                 <td>${car.bodyType}</td>
                 <td>${car.productionYear}</td>
                 <td>${car.color}</td>

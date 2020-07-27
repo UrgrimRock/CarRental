@@ -13,6 +13,8 @@ public interface CarMapper {
 
     CarMapper INSTANCE = Mappers.getMapper(CarMapper.class);
 
+    @Mapping(source = "car.base.adres", target = "baseAdres")
+    @Mapping(source = "car.base.name", target = "baseName")
     @Mapping(source = "car.base.id", target = "baseId")
     CarDto carToDto(Car car);
     //CarDto carToDto(Car car);

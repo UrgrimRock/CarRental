@@ -61,6 +61,7 @@
     </a>
 </button>
 <img src="pan%20kurczak.jpg">
+<img src='<c:url value="pan%20kurczak.jpg"></c:url>' />
 
 </body>
 </html>
